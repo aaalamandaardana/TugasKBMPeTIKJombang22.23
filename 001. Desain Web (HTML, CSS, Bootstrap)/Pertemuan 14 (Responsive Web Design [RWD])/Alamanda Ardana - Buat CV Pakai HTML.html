@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alamanda Ardana - (Calon) Software Engineer</title>
+    <style>
+        /* Versi Mobile (Breakpoint : 480px) */
+        * {
+            padding: 0.1rem;
+        }
+        h1 {
+            color: goldenrod;
+            text-align: center;
+        }
+        .bio {
+            line-height: 1.5;
+            text-align: justify;
+            display: flex;
+            margin: auto 0.2rem;
+            align-content: center;
+        }
+        .bio img {
+            width: 180px;
+            padding-right: 0.6rem;
+            border-radius: 20%;
+        }
+
+        .container {
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            color: goldenrod;
+        }
+        p {
+            color: black;
+        }
+
+        table {
+            border-spacing: 5px;
+        }
+        .keterampilan td {
+            width: 15%;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 1.5rem;
+        }
+
+        /* Versi Tablet (Breakpoint : 768px) */
+        @media screen and (min-width: 768px) {
+            * {
+                padding: 0.2rem;
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+            .bio p {
+                font-size: 1.4rem;
+                padding-left: 1rem;
+            }
+            .bio img {
+                width: 340px;
+                padding-right: 0.6rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+            }
+            p, td, li {
+                font-size: 1rem;
+            }
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .profil, .pengalaman {
+                margin-right: 5rem;
+            }
+        }
+
+        /* Versi Screen/Laptop */
+        @media screen and (min-width: 992px) {
+            h1 {
+                font-size: 5rem;
+            }
+            .bio p {
+                font-size: 2.5rem;
+            }
+            .bio img {
+                width: 440px;
+                padding-right: 1rem;
+            }
+            h2 {
+                font-size: 3.5rem;
+            }
+            p, td, li {
+                font-size: 1.5rem;
+            }
+            .container {
+                max-width: 100%;
+                justify-content: center;
+            }
+            .profil,
+            .pendidikan,
+            .pengalaman,
+            .keterampilan,
+            .hobi {
+                margin-right: 3rem;
+                width: fit-content;
+                flex-basis: 30%;
+            }
+
+            .keterampilan {
+                margin-right: 3.5rem;
+            }
+            .hobi {
+                margin-left: 7.5rem;
+            }
+        }
+        </style>
+
+</head>
+
+<body>
+    <h1>CURRICULUM VITAE</h1>
+    <!-- Bio -->
+    <div class="bio">
+        <img src="image\arda.jpeg" alt="Foto Profil">
+        <p><b><i>“Bagi saya, setiap manusia (termasuk saya) lahir ke dunia tidak untuk makan dan minum saja, tetapi juga bertugas menebarkan manfaat untuk alam semesta."</i></b></p>
+    </div>
+    
+    <div class="container">
+
+        <div class="profil">
+            <!-- Profile -->
+            <h2>Profil</h2>
+            <hr color="goldenrod" width="300px" align="left">
+            <p><strong>Nama</strong> &ensp; &ensp; : &ensp; Alamanda Ardana</p>
+            <p><strong>Asal</strong> &ensp; &ensp; &ensp; : &ensp; Depok</p>
+            <p><strong>Usia</strong> &ensp; &ensp; &ensp; : &ensp; 20 Tahun</p>
+            <p><strong>Telepon</strong> &ensp; : &ensp; (+62) 855-9126-9241</p>
+        </div>
+
+        <div class="pendidikan">
+            <!-- Education  -->
+            <h2>Pendidikan</h2>
+            <hr color="goldenrod" width="300px" align="left">
+            <p><strong>SDN Mampang 2 Depok</strong>
+                <br>
+                <small>Kota Depok, Jawa Barat</small>
+            </p>
+            <p><strong>SMP Negeri 2 Depok</strong>
+                <br>
+                <small>Kota Depok, Jawa Barat</small>
+            </p>
+            <p><strong>SMA Negeri 5 Depok</strong>
+                <br>
+                <small>Kota Depok, Jawa Barat</small>
+            </p>
+            <p><strong>PeTIK II Jombang YBM PLN</strong>
+                <br>
+                <small>Kabupaten Jombang, Jawa Timur</small>
+            </p>
+        </div>
+
+        <div class="pengalaman">
+            <!-- Experiences -->
+            <h2>Pengalaman</h2>
+            <hr color="goldenrod" width="300px" align="left">
+            <p><strong>Guru Les Privat Matematika Tingkat SD</strong>
+                <br>
+                <small>Mampang-Depok, Jawa Barat</small>
+            </p>
+            <p><strong>Koordinator Divisi Acara SEMARAK</strong>
+                <br>
+                <small>Bukadonasi.com</small>
+            </p>
+        </div>
+
+        <div class="keterampilan">
+            <!-- Skills -->
+            <h2>Keterampilan</h2>
+            <hr color="goldenrod" width="300px" align="left">
+            <table>
+                <tr>
+                    <td>C++</td>
+                    <td>Python</td>
+                    <td>HTML</td>
+                </tr>
+
+                <tr>
+                    <td>Word</td>
+                    <td>Excel</td>
+                    <td>PowerPoint</td>
+                </tr>
+
+                <tr>
+                    <td>Inkscape</td>
+                    <td>Canva</td>
+                    <td>Capcut</td>
+                </tr>
+
+                <tr>
+                    <td>Mengajar</td>
+                    <td>Mengoordinasikan Tim</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="hobi">
+            <!-- Hobbies -->
+            <h2>Hobi</h2>
+            <hr color="goldenrod" width="300px" align="left">
+            <ul> 
+                <li>Bulu Tangkis</li>
+                <li>Futsal</li>
+                <li>Tenis Meja</li>
+                <li>Voli</li>
+                <li>Pro Evolution Soccer</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
