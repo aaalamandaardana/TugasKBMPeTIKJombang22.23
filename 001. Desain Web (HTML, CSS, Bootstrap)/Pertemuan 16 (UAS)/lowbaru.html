@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Lowongan Kerja | SILOKER</title>
+    <link rel="icon" href="image\SILOKER-header.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+    
+    <style>
+       /* Mobile (min-width=300px) */
+        * {
+            font-family: 'Poppins';
+            max-width: 100%;
+            margin: auto;
+            margin-bottom: 1.5%;
+        }
+        .navbar {
+            height: fit-content;
+            background-color: #21D1D4;
+            margin-bottom: 3.5rem;
+            width: 100%;
+        }
+        .navbar a {
+            font-size: 1.25rem;
+            margin: 1rem;
+        }
+        .navbar img {
+            height: 3rem;
+        }
+        .dropdown-menu a {
+            font-size: 1rem;
+            padding-left: -5rem;
+        }
+        img { 
+          /* Biar makin smooth pas ga hover */
+          transition: transform.2s;
+        }
+        img:hover {
+          transform: scale(1.05);
+          transition-duration: 0.3s;
+        }
+
+        .card {
+            margin-bottom: 5%;
+            max-width: 100%;
+        }
+
+        .btn1 {
+            background-color: white;
+            border-radius: 7px;
+        }
+        .btn1:hover {
+            color: white;
+            background-color: #21D1D4;
+        }
+        .offcanvas-body {
+            background-color: #21D1D4 ;
+        }
+
+        footer {
+            height: fit-content;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            background-color: #179CA1;
+            padding: 1.5rem;
+            padding-bottom: 1rem;
+            padding-right: 2rem;
+            color: aliceblue;
+        }
+        footer h3 {
+            font-size: 0.9em;
+        }
+        footer h5 {
+            font-size: 0.7em;
+        }
+        footer  p {
+            font-size: 0.5em;
+        }
+        footer img {
+            display: none;
+        }
+        footer .tengah {
+            display: none;
+        }
+        footer iframe {
+            height: 0%;
+        }
+        .copyright {
+            margin: 0;
+            text-align: center;
+            background-color: #179CA1;
+            color: white;
+        } 
+        .copyright p {
+            font-size: 0.5em;
+        }
+
+        /* Tablet (min-width = 768px) */
+        @media screen and (min-width: 768px) {
+            * {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            .card {
+                margin-bottom: 5%;
+                max-width: 100%;
+            }
+            .card h2 {
+                font-size: 1em;
+            }
+            .footer {
+                height: fit-content;
+                background-color: #179CA1;
+                color: aliceblue;
+                display: flex;
+                flex-direction: row;
+                margin: 0 10%;
+            }
+            footer img {
+                display: block;
+                height: 80%;
+                flex-basis: 40%;
+            }
+            footer .kiri {
+                display: block;
+            }
+            footer .kanan h3 {
+                font-size: 1em;
+            }
+
+            footer .kanan h5 {
+                font-size: 0.85em;
+            }
+
+            footer .kanan p {
+                font-size: 0.7em;
+            }
+
+            .copyright {
+                margin: 0;
+                text-align: center;;
+                background-color: #179CA1;
+                color: white;
+            }
+
+            .copyright p {
+                font-size: 0.7em;
+            }
+        }
+
+        /* Desktop (min-width = 992px) */
+        @media screen and (min-width: 992px) {
+            .navbar a {
+                font-size: 1rem;
+                margin: 1rem;
+            }
+            .card {
+                margin-bottom: 5%;
+                max-width: 100%;
+            }
+
+            .card h2 {
+                font-size: 1.6em;
+            }
+
+            .footer {
+                height: fit-content;
+                background-color: #179CA1;
+                display: flex;
+                flex-direction: row;
+                color: aliceblue;
+            }
+            footer img {
+                display: block;
+                height: 13rem;
+                flex-basis: 30%;
+            }
+            .footer .kiri {
+                flex-direction: column;
+                flex-basis: 30%;
+                flex-wrap: wrap;
+            }
+            .footer .tengah {
+                display: block;
+                flex-direction: column;
+                flex-basis: 30%;
+                margin: 0 5%;
+            }
+            .footer .kanan {
+                flex-direction: column;
+                flex-basis: 40%;
+                flex-wrap: wrap;
+            }
+            footer .kanan h3 {
+                font-size: 1.1em;
+            }
+
+            footer .kanan h5 {
+                font-size: 0.9em;
+            }
+
+            footer .kanan p {
+                font-size: 0.7em;
+            }
+            .copyright {
+                margin-top: 0;
+            }
+            .copyright p {
+                font-size: 0.7em;
+            }
+        }
+
+        /* .card {
+            margin: auto 3rem 2rem;
+            margin-right: 40rem;
+            border: solid;
+        }
+        .card h3 {
+            margin-bottom: -0.75rem;
+        }
+        .breadcrumb {
+            margin-left: 0;
+            margin-bottom: 2rem;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: black;
+        }
+        hr {
+            width: 45rem;
+        } */
+        
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="beranda.html"><img src="image\SILOKER-header.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="beranda.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Lowongan Kerja
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lowbaru.html">Loker<i>(Icons)</i></a></li>
+                            <li><a class="dropdown-item" href="lowbaru-tabel.html">Loker<i>(Table)</i></a></li>
+                            <li><a class="dropdown-item" href="form-loker.html">Tambah Loker</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mitra
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="mitra.html">Mitra <i>(Icons)</i></a></li>
+                            <li><a class="dropdown-item" href="mitra-tabel.html">Mitra <i>(Table)</i></a></li>
+                            <li><a class="dropdown-item" href="form-mitra.html">Tambah Mitra</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Berita
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="berita.html">Berita <i>(Icons)</i></a></li>
+                            <li><a class="dropdown-item" href="berita-tabel.html">Berita <i>(Table)</i></a></li>
+                            <li><a class="dropdown-item" href="form-berita.html">Tambah Berita</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tim.html">Tim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Tulis Harapanmu" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Aamiin</button>
+            </form>
+        </div>
+    </nav>
+    
+    <div class="card">
+        <div class="card-body">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="lowbaru.html">Lowongan Kerja</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Daftar Lowongan Kerja</li>
+            </ol>
+            <h3>Lowongan PT. Mitra Mandiri Informatika</h3><br>
+            <p>Dibutuhkan Programmer Web <br> Kualifikasi :<ul>
+                <li>S1 Bidang Komputer</li>
+                <li>Menguasai Java, Spring Framework</li>
+                <li>Database MySQL, PostareSQL</li>
+            </ul>Deadline : 26 September 2022, <a href="detaillowbaru.html">Lihat Detail</a></p>
+            <hr>
+            <h3>Lowongan PT. Tokopedia</h3><br>
+            <p>Dibutuhkan Backend Developer <br> Kualifikasi :
+            <ul>
+                <li>Gelar BS dalam Ilmu Komputer</li>
+                <li>Menguasai keterampilan dalam Go, Java, atau bahasa berorientasi objek serupa</li>
+                <li>Database MySQL, PostgreSQL, atau NoSQL</li>
+            </ul>Deadline : 3 Oktober 2022, <a href="detaillowbaru3.html">Lihat Detail</a></p>
+        </div>
+        <div>
+            <button class="btn1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">26 September - 3 Oktober 2022</button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Berdasarkan Deadline</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul style="list-style-type: none;">
+                        <li><a href="lowbaru.html" style="text-decoration:none;color:white">26 September - 3 Oktober 2022</a></li><br>
+                        <li><a href="lowbaru2.html" style="text-decoration:none;color:white">17 - 24 Oktober 2022</a></li><br>
+                        <li><a href="lowbaru3.html" style="text-decoration:none;color:white">7 - 21 November 2022</a></li><br>
+                        <li><a href="lowbaru4.html" style="text-decoration:none;color:white">5 - 18 Desember 2022</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <div class="kiri">
+                <img src="image\SILOKER-footer.png">
+            </div>
+            <div class="tengah">
+                <h3>QUICK LINKS</h3>
+                <div>
+                    <a href="beranda.html" style="text-decoration:none;color:white">Beranda</a><br>
+                    <a href="lowbaru.html" style="text-decoration:none;color:white">Daftar Lowongan Kerja</a><br>
+                    <a href="mitra.html" style="text-decoration:none;color:white">Daftar Mitra</a><br>
+                    <a href="berita.html" style="text-decoration:none;color:white">Daftar Berita</a><br>
+                    <a href="tim.html" style="text-decoration:none;color:white">Tim</a><br>
+                    <a href="index.html" style="text-decoration:none;color:white">Log Out</a>
+                </div>
+            </div>
+            <div class="kanan">
+                <div class="judul">
+                    <h3>ALAMAT</h3>
+                </div>
+                <div class="deskripsi">
+                    <h5>Pesantren PeTIK II Jombang YBM PLN</h5>
+                    <p>F6G9+9JP, Plosogeneng, Kec. Jombang, Kabupaten Jombang, Jawa Timur</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.4661273466195!2d112.21687641536214!3d-7.524027976337641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e783fab1dc80271%3A0x8c4c1651240d8951!2sPesantren%20PeTIK%20II%20Jombang%20YBM%20PLN!5e0!3m2!1sid!2sid!4v1663408486679!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <hr>
+            <p>&copy; 2022 - Developed by Kelompok 4 PPL PeTIK Jombang</p>
+        </div>
+    </footer>
+</body>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</html>

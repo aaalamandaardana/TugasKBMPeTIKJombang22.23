@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Raih Kemerdekaan Finansial Bagi Milenial | SILOKER</title>
+    <link rel="icon" href="image\SILOKER-header.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+    
+    <style>
+        /* Mobile (min-width=300px) */
+        * {
+            font-family: 'Poppins';
+            max-width: 100%;
+            margin: auto;
+            margin-bottom: 1.5%;
+        }
+        .navbar {
+            height: fit-content;
+            background-color: #21D1D4;
+            margin-bottom: 3.5rem;
+            width: 100%;
+        }
+        .navbar a {
+            font-size: 1.25rem;
+            margin: 1rem;
+        }
+        .navbar img {
+            height: 3rem;
+        }
+        .dropdown-menu a {
+            font-size: 1rem;
+            padding-left: -5rem;
+        }
+        img { 
+          /* Biar makin smooth pas ga hover */
+          transition: transform.2s;
+        }
+        img:hover {
+          transform: scale(1.05);
+          transition-duration: 0.3s;
+        }
+
+        .isi {
+            margin: auto 2% 3rem;
+        }
+        .isi h1 {
+            font-size: 1.3rem;
+            margin-bottom: 3%;
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+        .isi h5 {
+            font-size: 0.7rem;
+            margin-bottom: 1.5%;
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+        .isi img {
+            max-width: 80%;
+        }
+        .paragraf {
+            margin: 2% 7%;
+            text-align: justify;
+            line-height: 2.5;
+        }
+        .paragraf p, .paragraf a {
+            font-size: 0.8rem;
+        }
+        .paragraf a {
+            text-decoration: none;
+            color: #179CA1;
+        }
+
+        footer {
+            height: fit-content;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            background-color: #179CA1;
+            padding: 1.5rem;
+            padding-bottom: 1rem;
+            padding-right: 2rem;
+            color: aliceblue;
+        }
+        footer h3 {
+            font-size: 0.9em;
+        }
+        footer h5 {
+            font-size: 0.7em;
+        }
+        footer  p {
+            font-size: 0.5em;
+        }
+        footer img {
+            display: none;
+        }
+        footer .tengah {
+            display: none;
+        }
+        footer iframe {
+            height: 0%;
+        }
+        .copyright {
+            margin: 0;
+            text-align: center;
+            background-color: #179CA1;
+            color: white;
+        } 
+        .copyright p {
+            font-size: 0.5em;
+        }
+
+        /* Tablet (min-width = 768px) */
+        @media screen and (min-width: 768px) {
+            * {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            .isi {
+            margin: auto 2% 3rem;
+            }
+            .isi h1 {
+                font-size: 1.5rem;
+                margin-bottom: 2%;
+                margin-left: 7%;
+                margin-right: 7%;
+            }
+            .isi h5 {
+                font-size: 0.7rem;
+                margin-bottom: 2%;
+                margin-left: 7%;
+                margin-right: 7%;
+            }
+            .isi img {
+                max-width: 80%;
+            }
+            .paragraf {
+                margin: 2% 10%;
+                text-align: justify;
+                line-height: 2.5;
+            }
+            .paragraf p, .paragraf a {
+                font-size: 0.8rem;
+            }
+            .paragraf a {
+                text-decoration: none;
+                color: #179CA1;
+            }
+
+            .footer {
+                height: fit-content;
+                background-color: #179CA1;
+                color: aliceblue;
+                display: flex;
+                flex-direction: row;
+                margin: 0 10%;
+            }
+            footer img {
+                display: block;
+                height: 80%;
+                flex-basis: 40%;
+            }
+            footer .kiri {
+                display: block;
+            }
+            footer .kanan h3 {
+                font-size: 1em;
+            }
+
+            footer .kanan h5 {
+                font-size: 0.85em;
+            }
+
+            footer .kanan p {
+                font-size: 0.7em;
+            }
+
+            .copyright {
+                margin: 0;
+                text-align: center;;
+                background-color: #179CA1;
+                color: white;
+            }
+
+            .copyright p {
+                font-size: 0.7em;
+            }
+        }
+
+        /* Desktop (min-width = 992px) */
+        @media screen and (min-width: 992px) {
+            .navbar a {
+                font-size: 1rem;
+                margin: 1rem;
+            }
+
+            .isi {
+            margin: auto 2% 3rem;
+            }
+            .isi h1 {
+                font-size: 1.7rem;
+                margin-bottom: 2%;
+                margin-left: 7%;
+                margin-right: 7%;
+            }
+            .isi h5 {
+                font-size: 0.9rem;
+                margin-bottom: 2%;
+                margin-left: 7%;
+                margin-right: 7%;
+            }
+            .isi img {
+                max-width: 80%;
+            }
+            .paragraf {
+                margin: 2% 10%;
+                text-align: justify;
+                line-height: 2.5;
+            }
+            .paragraf p, .paragraf a {
+                font-size: 1rem;
+            }
+            .paragraf a {
+                text-decoration: none;
+                color: #179CA1;
+            }
+
+            .footer {
+                height: fit-content;
+                background-color: #179CA1;
+                display: flex;
+                flex-direction: row;
+                color: aliceblue;
+            }
+            footer img {
+                display: block;
+                height: 13rem;
+                flex-basis: 30%;
+            }
+            .footer .kiri {
+                flex-direction: column;
+                flex-basis: 30%;
+                flex-wrap: wrap;
+            }
+            .footer .tengah {
+                display: block;
+                flex-direction: column;
+                flex-basis: 30%;
+                margin: 0 5%;
+            }
+            .footer .kanan {
+                flex-direction: column;
+                flex-basis: 40%;
+                flex-wrap: wrap;
+            }
+            footer .kanan h3 {
+                font-size: 1.1em;
+            }
+
+            footer .kanan h5 {
+                font-size: 0.9em;
+            }
+
+            footer .kanan p {
+                font-size: 0.7em;
+            }
+            .copyright {
+                margin-top: 0;
+            }
+            .copyright p {
+                font-size: 0.7em;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="beranda.html"><img src="image\SILOKER-header.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="beranda.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Lowongan Kerja
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lowbaru.html">Loker <i>(Icons)</i></a></li>
+                            <li><a class="dropdown-item" href="lowbaru-tabel.html">Loker <i>(Table)</i></a></li>
+                            <li><a class="dropdown-item" href="form-loker.html">Tambah Loker</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mitra
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="mitra.html">Mitra <i>(Icons)</i></a></li>
+                            <li><a class="dropdown-item" href="mitra-tabel.html">Mitra <i>(Table)</i></a></li>
+                            <li><a class="dropdown-item" href="form-mitra.html">Tambah Mitra</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Berita
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="berita.html">Berita <i>(Icons)</i></a></li>
+                            <li><a class="dropdown-item" href="berita-tabel.html">Berita <i>(Table)</i></a></li>
+                            <li><a class="dropdown-item" href="form-berita.html">Tambah Berita</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tim.html">Tim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Tulis Harapanmu" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Aamiin</button>
+            </form>
+        </div>
+    </nav>
+
+    <center class="isi">
+        <h1>Tips Raih Kemerdekaan Finansial Bagi Milenial</h1>
+        <h5>Joko Panji Sasongko — Asumsi.co &bull; 21 Agustus 2022</h5>
+        <img src="https://www.asumsi.co/wp-content/uploads/1661072698255_coinsg9ee9710441280.jpg">
+        <div class="paragraf">
+            <p>Mereka yang mampu mengelola keuangan dengan baik akan berpotensi meraih kemerdekaan finansial, yakni bukan berarti memiliki banyak
+                harta dan aset, melainkan mampu memenuhi kebutuhan hidup yang layak dan bebas dari utang, menurut Co-Founder MiPOWER by Sequis and Registered Financial Planner Edwin Limanta.
+            </p>
+            <p>
+                Dia seperti dikutip <a href="https://www.antaranews.com/berita/3062945/tips-raih-kemerdekaan-finansial-bagi-milenial">Antara</a> dari siaran persnya, menyarankan milenial Indonesia segera mulai menata finansial dari sekarang demi mengamankan masa depan. Hal ini meski kondisi finansial setiap orang berbeda dan sebagian belum merdeka sepenuhnya.
+            </p>
+            <p>
+                Edwin lalu memberikan tips untuk mencapai kemerdekaan finansial, salah satunya disiplin melaksanakan manajemen anggaran. Menurut dia, seberapapun penghasilan, jika pengeluaran tidak dianggarkan dengan baik, maka penghasilan tersebut tidak akan cukup dan akan habis.
+            </p>
+            <p>
+                Untuk itu, buatlah rencana anggaran setiap bulan untuk pengeluaran, dana darurat, dan persiapan masa depan, yakni tabungan, investasi serta asuransi. Jika penghasilan diperoleh dalam jumlah tetap dan pada periode yang sama setiap bulan, maka buatlah rencana anggaran jangka panjang.
+            </p>
+            <p>
+                Kemudian, agar dapat disiplin melaksanakan manajemen anggaran, sebaiknya bedakan dulu antara kebutuhan dan keinginan agar kondisi keuangan tetap stabil. Posisikan kebutuhan sebagai skala prioritas dalam pos pengeluaran untuk mencegah kita mengeluarkan uang untuk pengeluaran yang kurang bermanfaat.
+            </p>
+            <p>
+                Kebutuhan sehari-hari merupakan pengeluaran rutin dan harus dipenuhi, sedangkan keinginan termasuk hal subjektif yang berkaitan dengan selera dan pemenuhannya masih dapat ditunda di lain waktu.
+            </p>
+            <p>
+                Edwin menyebutkan, sejumlah manfaat melakukan manajemen anggaran, yakni menjaga arus kas, mengamankan aset masa depan, melatih membatasi dari keinginan berutang, membantu mengevaluasi kondisi keuangan sehingga orang dapat mengetahui apakah pemasukan sudah seimbang dengan pengeluaran atau masih perlu penyesuaian.
+            </p>
+            <p>
+                <i>“Melakukan manajemen anggaran juga dapat menjadi penyemangat bagi milenial yang giat memaksimalkan kenaikan aset,”</i>ujar Edwin.
+            </p>
+            <p>
+                Hal lain yang bisa dilakukan, yakni membatasi utang konsumtif. Berutang memungkinkan selama produktif, misalnya berutang untuk cicilan rumah atau untuk modal usaha. Hal ini karena utang tersebut jika dikonversi menjadi aset yang produktif maka bisa memberikan penghasilan dan berarti membuka jalan menuju kemerdekaan finansial.
+            </p>
+            <p>
+                Sebaliknya, orang berutang konsumtif berpotensi menggerus pendapatan. Apalagi jika utang mengandung bunga yang harus dilunasi tepat waktu. Jika lupa atau lalai membayar tagihan, maka dapat menggerus pos tabungan.
+            </p>
+            <p>
+                Edwin mencontohkan, jika ingin mengganti <i>smartphone,</i> maka batasi pengeluaran lain agar dapat menambah jumlah tabungan untuk bisa membeli <i>smartphone</i> baru. Namun, lebih baik jika punya pendapatan tambahan sehingga bisa memenuhi keinginan akan barang-barang tersier.
+            </p>
+            <p>
+                Walau begitu, Edwin tetap menyarankan untuk batasi keinginan belanja dan selektif dalam berutang jika ingin meraih kemerdekaan finansial.
+            </p>
+            <p>
+                Dia menyarankan orang-orang termasuk para milenial membiasakan hidup minimalis, yakni mengutamakan prioritas. Orang-orang dapat memilah antara kebutuhan penting versus kurang penting sehingga pengeluaran dapat dilakukan secukupnya dan penghasilan dapat dialokasikan lebih banyak ke tabungan.
+            </p>
+            <p>
+                Menurut dia, dengan membiasakan hidup minimalis, maka akan melatih diri tidak latah ingin ikut tren atau bersaing dengan orang lain.
+            </p>
+            <p>
+                Orang-orang juga perlu mempersiapkan dana darurat. Dana ini ditujukan untuk kondisi mendesak sehingga jika ada pengeluaran mendadak, tidak perlu berutang untuk memenuhi kebutuhan tersebut.
+            </p>
+            <p>
+                Cara membangun dana darurat, yakni menyisihkan setidaknya 10 persen dari pendapatan rutin. Sisihkan hingga bisa mencapai setidaknya tiga sampai enam kali besar pengeluaran rutin bulanan.
+            </p>
+            <p>
+                Edwin mengatakan, tabungan menjadi instrumen paling umum untuk menyimpan dana darurat karena likuiditas tinggi, aksesnya mudah, dan dananya dapat diambil kapan saja saat dibutuhkan.
+            </p>
+            <p>
+                Orang-orang juga dapat mulai berinvestasi, sebagai salah satu cara mencapai merdeka finansial karena investasi dinilai mampu bersaing dengan inflasi yang terjadi setiap tahun.
+            </p>
+            <p>
+                Hasil investasi nantinya dapat digunakan untuk membantu membiayai pendidikan anak atau persiapan masa pensiun. Jika belum berpengalaman dalam berinvestasi, bisa mulai dengan investasi yang minim risiko, seperti reksadana atau obligasi.
+            </p>
+            <p>
+                Nasihat bagi pemula saat berinvestasi, yakni jangan terlena <i>return of investment</i> tinggi yang diperoleh orang lain. Pelajari setiap instrumen sebelum berinvestasi dan ketahui profil risiko pribadi.
+            </p>
+            <p>
+                Terakhir, orang-orang dapat mempertimbangkan memulai berasuransi, sebagai upaya mengelola risiko keuangan yang berdampak besar pada stabilitas keuangan. Risiko keuangan ini misalnya saat keluarga mendadak mengalami kesulitan keuangan karena hilangnya pendapatan keluarga yang disebabkan meninggalnya pencari nafkah atau tabungan terkuras karena harus membayar biaya rumah sakit.
+            </p>
+        </div>
+    </center>
+
+    <footer>
+        <div class="footer">
+            <div class="kiri">
+                <img src="image\SILOKER-footer.png">
+            </div>
+            <div class="tengah">
+                <h3>QUICK LINKS</h3>
+                <div>
+                    <a href="beranda.html" style="text-decoration:none;color:white">Beranda</a><br>
+                    <a href="lowbaru.html" style="text-decoration:none;color:white">Daftar Lowongan Kerja</a><br>
+                    <a href="mitra.html" style="text-decoration:none;color:white">Daftar Mitra</a><br>
+                    <a href="berita.html" style="text-decoration:none;color:white">Daftar Berita</a><br>
+                    <a href="tim.html" style="text-decoration:none;color:white">Tim</a><br>
+                    <a href="index.html" style="text-decoration:none;color:white">Log Out</a>
+                </div>
+            </div>
+            <div class="kanan">
+                <div class="judul">
+                    <h3>ALAMAT</h3>
+                </div>
+                <div class="deskripsi">
+                    <h5>Pesantren PeTIK II Jombang YBM PLN</h5>
+                    <p>F6G9+9JP, Plosogeneng, Kec. Jombang, Kabupaten Jombang, Jawa Timur</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.4661273466195!2d112.21687641536214!3d-7.524027976337641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e783fab1dc80271%3A0x8c4c1651240d8951!2sPesantren%20PeTIK%20II%20Jombang%20YBM%20PLN!5e0!3m2!1sid!2sid!4v1663408486679!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <hr>
+            <p>&copy; 2022 - Developed by Kelompok 4 PPL PeTIK Jombang</p>
+        </div>
+    </footer>
+    
+</body>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</html>
