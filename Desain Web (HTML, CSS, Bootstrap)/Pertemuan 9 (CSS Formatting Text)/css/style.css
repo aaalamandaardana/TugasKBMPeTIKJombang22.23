@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    height: fit-content;
+    float: left;
+    padding: 20px ;
+}
+/* ---------------header-------------------- */
+.navbar{
+    background-color: #759EB8;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 75%;
+}
+.title{
+    color: white;
+    font-family: 'Tangerine';
+    font-size: 30px;
+}
+
+/* ---------------sidebar-------------------- */
+.section{
+    display: flex;
+}
+
+.sidebar{
+    margin-top: 0;
+    margin-bottom: 0;
+    background: lightblue;
+    width: 15%;
+    height: 88.5vh;
+    top: 25%;
+    padding-left: 10px;
+}
+.sidebar p{
+    line-height: 5;
+    font-size: 20px;
+    color: white;
+}
+.sidebar a{
+    margin-left: 20px;
+}
+
+.sidebar p:hover{
+    color: black;
+}
+
+/* ---------------konten-------------------- */
+.konten{
+    background: #fff;
+    margin-left: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 55px;
+    width: 100%;
+    padding: 12px;
+}
+.konten p{
+    text-align: left;
+    background-color: white;
+}
+.konten .pengantar p{
+    width: 100%;
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.4;
+}
+.konten .pengantar iframe{
+    padding: 50px;
+}
+.konten .pengantar img{
+    width: 30%;
+}
+
+
+
+/* ---------------footer-------------------- */
+footer{
+    font-style: normal;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 30px;
+    background-color: #759EB8;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    align-content: center;
+}
