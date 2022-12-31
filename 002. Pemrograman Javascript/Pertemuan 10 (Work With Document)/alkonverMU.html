@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlkonverMU : Program Konversi Mata Uang</title>
+
+    <!-- Untuk Icon Samping Judul Website -->
+    <link rel="icon" href="https://ponpesthursina.id/public/img/linkterkait/1643086631_7cdba0c69d53c3cdb10a.png">
+
+    <!-- Supaya Font-nya jadi Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+        body {
+            margin: 3rem 2rem;
+        }
+        img {
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            border: 1px solid goldenrod;
+            border-spacing: 1.8rem;
+            width: 90%;
+            margin-top: 2rem;
+        }
+        th, tr {
+            text-align: center;
+        }
+        th {
+            background-color: gold;
+        }
+        select, input {
+            width: 95%;
+        }
+
+        button {
+            margin: 2rem auto;
+        }
+        button:hover {
+            background-color: gold;
+        }
+
+
+        #hasil {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div>
+            <img src="https://petik.or.id/assets/img/team/Petik_YBM.png" height="70px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" height="70px">
+        </div>
+
+        <h1>AlkonverMU</h1>
+        <i>Program Konversi Mata Uang Negara Melayu dan Amerika</i> <br> 
+        <i>yang Dibuat oleh Alamanda Ardana pada 8 November 2022</i>
+
+        <table>
+            <tr>
+                <th>Dari</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="mataUangAsal" id="mataUangAsal">
+                        <option value="USD">Dollar US (USD atau US$)</option>
+                        <option value="SGD">Dollar Singapura (SGD atau S$)</option>
+                        <option value="BND">Dollar Brunei (BND atau B$)</option>
+                        <option value="MYR">Ringgit Malaysia (MYR atau RM)</option>
+                        <option value="IDR">Rupiah Indonesia (IDR atau Rp)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="number" placeholder="Masukkan Nominal" id="inputan">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Ke</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="mataUangTujuan" id="mataUangTujuan">
+                         <option value="USD">Dollar US (USD atau US$)</option>
+                        <option value="SGD">Dollar Singapura (SGD atau S$)</option>
+                        <option value="BND">Dollar Brunei (BND atau B$)</option>
+                        <option value="MYR">Ringgit Malaysia (MYR atau RM)</option>
+                        <option value="IDR">Rupiah Indonesia (IDR atau Rp)</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <button onclick="hitung()" id="hitung">Hitung</button> <br>
+
+        <i id="hasil">Hasil</i>
+    </center>
+</body>
+
+<script>
+    let hitung = () => {
+        // Inisialisasi Variabel
+        let x = document.getElementById("mataUangAsal").value;
+        let y = document.getElementById("mataUangTujuan").value;
+        let inputan = parseFloat(document.getElementById("inputan").value);
+        let hasil = document.getElementById("hasil");
+        
+        // Asal dan Tujuannya Sama
+        if (
+            x == "USD" && y == "USD" ||
+            x == "SGD" && y == "SGD" ||
+            x == "BND" && y == "BND" ||
+            x == "MYR" && y == "MYR" ||
+            x == "IDR" && y == "IDR"
+        ) {
+            let total = inputan;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+
+        // Asal : USD
+        else if (x == "USD" && y == "SGD") {
+            let total = inputan * 1.40;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "USD" && y == "BND") {
+            let total = inputan * 1.40;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "USD" && y == "MYR") {
+            let total = inputan * 4.74;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "USD" && y == "IDR") {
+            let total = inputan * 15642.15;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+
+        // Asal : SGD
+        else if (x == "SGD" && y == "USD") {
+            let total = inputan * 0.71;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "SGD" && y == "BND") {
+            let total = inputan * 1;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "SGD" && y == "MYR") {
+            let total = inputan * 3.38;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "SGD" && y == "IDR") {
+            let total = inputan * 11154.36;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+
+        // Asal : BND
+        else if (x == "BND" && y == "USD") {
+            let total = inputan * 0.71;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "BND" && y == "SGD") {
+            let total = inputan * 1;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "BND" && y == "MYR") {
+            let total = inputan * 3.38;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "BND" && y == "IDR") {
+            let total = inputan * 11154.36;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+
+        // Asal : MYR
+        else if (x == "MYR" && y == "USD") {
+            let total = inputan * 0.21;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "MYR" && y == "SGD") {
+            let total = inputan * 0.3;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "MYR" && y == "BND") {
+            let total = inputan * 0.3;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "MYR" && y == "IDR") {
+            let total = inputan * 3302.47;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+
+        // Asal : IDR
+        else if (x == "IDR" && y == "USD") {
+            let total = inputan * 0.000064;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "IDR" && y == "SGD") {
+            let total = inputan * 0.00009;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "IDR" && y == "BND") {
+            let total = inputan * 0.00009;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+        else if (x == "IDR" && y == "MYR") {
+            let total = inputan * 0.0003;
+            hasil.innerText = inputan + " " + x + " " + "=" + " " + total + " " + y;
+        }
+    }
+</script>
+
+</html>
