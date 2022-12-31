@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alamanda Ardana - Tugas Mandiri 7 JavaScript</title>
+
+    <!-- Untuk Icon Samping Judul Website -->
+    <link rel="icon" href="https://ponpesthursina.id/public/img/linkterkait/1643086631_7cdba0c69d53c3cdb10a.png">
+
+    <!-- Supaya Font-nya jadi Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+
+        .foto {
+            display: flex;
+            flex-direction: row;
+            margin-top: 10%;
+            margin-left: 38%;
+        }
+        img {
+            margin: auto 2rem;
+        }
+
+        .operasi {
+            margin: 2rem auto;
+        }
+
+        fieldset {
+            margin-bottom: 2rem;
+            width: 70%;
+            background-color: gold;
+        }
+
+        .aksi {
+            margin-bottom: 2rem;
+        }
+        abbr {
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: gold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        
+        <div class="foto">
+            <img src="https://petik.or.id/assets/img/team/Petik_YBM.png" height="70px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" height="70px">
+        </div>
+        
+        <div class="operasi">
+            <!-- Judul -->
+            <h1>Belajar Mengubah Value Array pada JavaScript</h1>
+            <h4><i>(Dibuat oleh Alamanda Ardana)</i></h4>
+
+            <!-- Isi Array Hewan -->
+            <abbr title='Array "hewan"'>
+                <fieldset>
+                    <h2 id="isi"></h2>
+                </fieldset>
+            </abbr>
+
+            <!-- Opsi Aksi -->
+            <div class="aksi">
+                
+                <!-- Abbr untuk Menampilkan Keterangan Ketika Tombol Didatangi -->
+                <abbr title='Memasukkan "Gagak" ke dalam Array "hewan" dan Menjadikannya sebagai Index Terakhir'>
+                    <button onclick="pushGagak();">hewan.push(" Gagak")</button>
+                </abbr>
+
+                <abbr title='Menghapus Index Terakhir Array "hewan"'>
+                    <button onclick="hapusi99()">hewan.pop()
+                    </button>
+                </abbr>
+
+                <abbr title='Mengubah Index Ke-2 pada Array "hewan" menjadi "Kucing"'>
+                    <button onclick="jadiKucing()">hewan[2] = " Kucing"</button>
+                </abbr>
+                
+                <abbr title='Memasukkan "Gagak" ke dalam Array "hewan" dan Menjadikannya sebagai Index 0 (Pertama)'>
+                    <button onclick="unshiftGagak()">hewan.unshift(" Gagak")</button>
+                </abbr>
+
+                <abbr title='Menghapus Index Pertama Array "hewan"'>
+                    <button onclick="hapusi0()">hewan.shift()</button>
+                </abbr>
+            </div>
+
+            <abbr title='Mengembalikan Value Array "hewan" seperti Asalnya'>
+                <button onclick="awal()">Kembali ke Awal</button>
+            </abbr>
+        </div>
+
+        <!-- Keterangan -->
+        <i class="keterangan">*arahkan arrow ke tombol untuk mengetahui keterangan dari tombol tersebut</i>
+
+    </center>
+</body>
+
+<script src="script.js"></script>
+
+</html>
