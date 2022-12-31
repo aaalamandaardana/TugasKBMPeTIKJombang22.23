@@ -1,0 +1,348 @@
+<!-- Alamanda Ardana - Program Pendaftaran Mahasantri PeTIK Jombang 2023/2024 (Disertai Resources Loading) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Mahasantri PeTIK Jombang 2023/2024</title>
+
+    <!-- Untuk Icon Samping Judul Website -->
+    <link rel="icon" href="https://petik.or.id/wp-content/uploads/2022/08/logo-petik.png">
+
+    <!-- Supaya Font-nya jadi Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+
+    <!-- Bootstrap 5 - CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+        body {
+            margin: 2rem;
+        }
+
+        h1 {
+            color: darkcyan;
+            margin: 2rem auto;
+        }
+
+        h3 {
+            margin-bottom: 2rem;
+            text-align: left;
+            color: darkcyan;
+        }
+
+        label {
+            text-align: left;
+            color: darkcyan;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            padding: 2% 5%;
+            border: 1px solid darkcyan;
+            border-radius: 10px;
+        }
+        div {
+            margin-bottom: 2rem;
+        }
+        input {
+            margin-top : 1rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        textarea,
+        select {
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        button {
+            height: 2.5rem;
+            width: 7rem;
+            align-self: center;
+            background-color: darkturquoise;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <a target="_blank" href="https://petikjombang.com/"><img onerror="maaf()" src="https://petik.or.id/assets/img/team/Petik_YBM.png" height="70px"></a>
+        <h1>Pendaftaran Mahasantri PeTIK Jombang 2023/2024</h1>
+
+        <form>
+            <div class="dataCalonMahasantri"> 
+                <h3>BAGIAN 1 : DATA CALON MAHASANTRI</h3>
+                <label>Nama Lengkap</label>
+                <input type="text" placeholder="Masukkan Nama Lengkap Anda" id="nama" required>
+
+                <label>Tempat Lahir</label>
+                <input type="text" placeholder="Masukkan Tempat Lahir Anda" id="tmpLahir" required>
+
+                <label>Tanggal Lahir</label>
+                <input type="date" placeholder="Masukkan Tanggal Lahir Anda" id="tglLahir"  required>
+                
+                <label>Sekolah Asal</label>
+                <input type="text" placeholder="Masukkan Sekolah Asal Anda" id="sekolah" required>
+
+                <label>Alamat Rumah Terkini</label>
+                <textarea cols="30" rows="4" placeholder="Masukkan Alamat Rumah Anda Terkini" id="alamat" required></textarea>
+
+                <label>Nomor Telepon</label>
+                <input type="number" placeholder="Masukkan Nomor Telepon Anda" id="notel" required>
+            </div>
+
+            <div class="dataOrtuWali">
+                <h3>BAGIAN 2 : DATA ORANG TUA/WALI</h3>
+                <label>
+                    Nama Ayah
+                    <small><i>(Jika Sudah Meninggal Dunia, Tambahkan Keterangan "(Alm.)" di Samping Namanya)</i></small>
+                </label>
+                <input type="text" placeholder='Masukkan Nama Ayah Anda' id="namaAyah" required>
+
+                <label>
+                    Nomor Telepon Ayah 
+                    <small><i>(opsional)</i></small>
+                </label>
+                <input type="number" placeholder="Masukkan Nomor Telepon Ayah" id="notelAyah">
+                    
+                <label>
+                    Nama Ibu
+                    <small><i>(Jika Sudah Meninggal Dunia, Tambahkan Keterangan "(Alm.)" di Samping Namanya)</i></small>
+                </label>
+                <input type="text" placeholder='Masukkan Nama Ibu Anda' id="namaIbu" required>
+
+                <label>
+                    Nomor Telepon Ibu 
+                    <small><i>(opsional)</i></small>
+                </label>
+                <input type="number" placeholder="Masukkan Nomor Telepon Ibu" id="notelIbu">
+
+                <label> 
+                    Nama Wali 
+                    <small><i>(Isi Jika Ayah dan Ibu Anda Sudah Tiada atau Tidak Mempunyai Nomor Telepon)</i></small>
+                </label>
+                <input type="text" placeholder='Masukkan Nama Wali Anda' id="wali">
+
+                <label> 
+                    Nomor Telepon Wali 
+                    <small><i>(Isi Jika Ayah dan Ibu Anda Sudah Tiada atau Tidak Mempunyai Nomor Telepon)</i></small>
+                </label>
+                <input type="number" placeholder="Masukkan Nomor Telepon Wali" id="notelWali">
+
+                <label>
+                    Hubungan Wali Tersebut dengan Anda
+                    <small><i>(Isi Jika Ayah dan Ibu Anda Sudah Tiada atau Tidak Mempunyai Nomor Telepon)</i></small>
+                </label>
+                <input type="text" placeholder="Contoh : Paman, Bibi, Kakak, dll" id="hubunganWali">
+            </div>
+
+            <div class="berkasPendukung">
+                <h3>BAGIAN 3 : BERKAS PENDUKUNG</h3>
+                <label class="form-label">
+                    Kartu Tanda Penduduk / KTP
+                    <small><i>(Jika Belum Punya, Silakan Lampirkan Berkas Kartu Pelajar / sejenisnya)</i></small>
+                </label>
+                <input class="form-control" type="file" id="ktp" required>
+
+                <label class="form-label">
+                    Kartu Keluarga / KK
+                </label>
+                <input class="form-control" type="file" id="kk" required>
+
+                <label class="form-label">
+                    Surat Keterangan Tidak Mampu yang Dikeluarkan oleh Pemerintah/DKM Setempat
+                </label>
+                <input class="form-control" type="file" id="sktm" required>
+            </div>
+
+            <div class="dataPembuatanAkun">
+                <h3>BAGIAN 4 : DATA PEMBUATAN AKUN CALON MAHASANTRI</h3>
+                <label>Email</label>
+                <input type="email" placeholder="Masukkan Email Anda" id="email" required>
+
+                <label>Kata Sandi</label>
+                <input type="password" placeholder="Masukkan Kata Sandi Anda (Bebas)" id="password" required>
+
+                <label>Minat Jurusan</label>
+                <select>
+                    <option value="ppl">Pengembangan Perangkat Lunak (PPL)</option>
+                    <option value="dm">Digital Marketing (DM)</option>
+                </select>
+            </div>
+
+            <button id="tombol" onclick="alertBerhasil(event)">Daftar</button>
+        </form>
+
+        <div id="berhasil"></div>
+    </center>
+</body>
+
+<!-- Bootstrap 5 - JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<script>
+    // OnLoad -- Notif ketika Halaman Web sedang Loading 
+    window.onload = function(event) {
+        alert("Halaman sedang dimuat. Mohon tunggu sebentar, ya.")
+    };
+    document.get
+
+    // OnBeforeUnload -- Notif ketika Halaman Web akan Ditutup
+    // (Note : The default message that appears in the confirmation box, is different in different browsers. However, the standard message is something like "Are you sure you want to leave this page?". This message cannot be removed.) -- Reference : https://www.w3schools.com/jsref/event_onbeforeunload.asp
+    window.onbeforeunload = function(event) {
+        event.returnValue = "Jika kamu keluar dari halaman web ini dan belum mendapat notif berwarna hijau, data-data yang sudah ditulis akan terhapus.";
+    };
+
+    // OnUnload -- Notif ketika Halaman Web Ditutup
+    // (Note: Due to different browser settings, this event may not always work as expected.) -- Reference : https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onunload
+    window.onunload = function(event) {
+        alert("Terima kasih karena sudah mengujungi web ini.")
+    };
+
+    // OnError -- Notif ketika Gambar Tidak Bisa Dimuat
+    let maaf = () => {
+        alert("Mohon maaf, gambar belum bisa dimuat secara sempurna.")
+    }
+
+    // ------------------------------------------------
+
+    // Inisialisasi Variabel -- Untuk Mouse Event
+    let tombol = document.getElementById("tombol");
+    
+    // Mouse Event -- onmouseover, ketika pointer diarahkan ke button, button berubah warna jadi kuning
+    let mouseOver = () => {
+        tombol.style.backgroundColor = "yellow";
+    }
+    tombol.onmouseover = function() {mouseOver()};
+
+    // Mouse Event -- onmouseout, ketika pointer diarahkan dari button ke luar button, button berubah warna jadi dark cyan
+    let mouseOut = () => {
+        tombol.style.backgroundColor = "darkcyan";
+    }
+    tombol.onmouseout = function() {mouseOut()};
+
+    // ------------------------------------------------
+
+    // Membuat Validasi Form
+    let alertBerhasil = (event) => {
+        // Supaya Pada Saat Tekan Button, Halaman Tidak Refresh
+        event.preventDefault();
+        
+        //Inisialisasi Variabel
+        let nama = document.getElementById("nama").value;
+        let tmpLahir = document.getElementById("tmpLahir").value;
+        let tglLahir = document.getElementById("tglLahir").value;
+        let sekolah = document.getElementById("sekolah").value;
+        let alamat = document.getElementById("alamat").value;
+        let notel = document.getElementById("notel").value;
+        let namaAyah = document.getElementById("namaAyah").value;
+        let notelAyah = document.getElementById("notelAyah").value;
+        let namaIbu = document.getElementById("namaIbu").value;
+        let notelIbu = document.getElementById("notelIbu").value;
+        let wali = document.getElementById("wali").value;
+        let notelWali = document.getElementById("notelWali").value;
+        let hubunganWali = document.getElementById("hubunganWali").value;
+        let ktp = document.getElementById("ktp").value;
+        let kk = document.getElementById("kk").value;
+        let sktm = document.getElementById("sktm").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let berhasil = document.getElementById("berhasil");
+
+        // Membuat Percabangan Kondisi Jika Ada Kolom yang Kosong
+        if (nama === '') {
+            alert('Mohon Isi Kolom "Nama Lengkap" dengan Benar!');
+        }
+        else if (tmpLahir === '') {
+            alert('Mohon Isi Kolom "Tempat Lahir" dengan Benar!');
+        }
+        else if (tglLahir === '') {
+            alert('Mohon Isi Kolom "Tanggal Lahir" dengan Benar!');
+        }
+        else if (sekolah === '') {
+            alert('Mohon Isi Kolom "Sekolah Asal" dengan Benar!');
+        }
+        else if (alamat === '') {
+            alert('Mohon Isi Kolom "Alamat" dengan Benar!');
+        }
+        else if (notel === '') {
+            alert('Mohon Isi Kolom "Nomor Telepon" dengan Benar!');
+        }
+
+        else if (namaAyah === '') {
+            alert('Mohon Isi Kolom "Nama Ayah" dengan Benar!');
+        }
+        else if (namaIbu === '') {
+            alert('Mohon Isi Kolom "Nama Ibu" dengan Benar!');
+        }
+        else if (namaAyah.includes('Alm.') && 
+        namaIbu.includes('Alm.') &&
+        wali === ''
+        ) {
+            alert('Mohon Isi Kolom "Nama Wali" dengan Benar!');
+        }
+        else if (notelAyah === '' &&
+        notelIbu === '' &&
+        wali === '') {
+            alert('Mohon Isi Kolom "Nama Wali" dengan Benar!');
+        }
+        else if (namaAyah.includes('Alm.') && 
+        namaIbu.includes('Alm.') &&
+        notelWali === ''
+        ) {
+            alert('Mohon Isi Kolom "Nomor Telepon Wali" dengan Benar!');
+        }
+        else if (notelAyah === '' &&
+        notelIbu === '' &&
+        notelWali === '') {
+            alert('Mohon Isi Kolom "Nomor Telepon Wali" dengan Benar!');
+        }
+        else if (namaAyah.includes('Alm.') && 
+        namaIbu.includes('Alm.') &&
+        hubunganWali === ''
+        ) {
+            alert('Mohon Isi Kolom "Hubungan Wali" dengan Benar!');
+        }
+        else if (notelAyah === '' &&
+        notelIbu === '' &&
+        hubunganWali === '') {
+            alert('Mohon Isi Kolom "Hubungan Wali" dengan Benar!');
+        }
+
+        else if (ktp === '') {
+            alert('Mohon Lampirkan Berkas KTP/sejenisnya pada Kolom "KTP" dengan Benar!');
+        }
+        else if (kk === '') {
+            alert('Mohon Lampirkan Berkas Kartu Keluarga pada Kolom "KK" dengan Benar!');
+        }
+        else if (sktm === '') {
+            alert('Mohon Lampirkan Berkas Surat Keterangan Tidak Mampu pada Kolom "SKTM" dengan Benar!');
+        }
+
+        else if (email === '' || !email.includes('@')) {
+            alert('Mohon Isi Kolom "Email" dengan Benar!');
+        }
+        else if (password === '') {
+            alert('Mohon Isi Kolom "Kata Sandi" dengan Benar!');
+        }
+        else {
+            berhasil.outerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+                '<strong>Hai, ' + nama + '!</strong>' + ' Selamat, kamu telah terdaftar sebagai Calon Mahasantri PeTIK Jombang 2023/2024. Tunggu email dari kami terkait kelanjutan seleksi.'
+            ' <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+            '</div>'
+        }
+    }
+</script>
+
+</html>
