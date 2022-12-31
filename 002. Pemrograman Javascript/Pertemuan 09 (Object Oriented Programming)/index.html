@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alamanda Ardana - Tugas Mandiri 9 Javascript</title>
+
+    <!-- Untuk Icon Samping Judul Website -->
+    <link rel="icon" href="https://ponpesthursina.id/public/img/linkterkait/1643086631_7cdba0c69d53c3cdb10a.png">
+
+    <!-- Supaya Font-nya jadi Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+        body {
+            margin: 3rem 2rem;
+        }
+        img {
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+        }
+        table {
+            border: 1px solid;
+            border-spacing: 4rem;
+            width: 90%;
+            margin-top: 2rem;
+        }
+        th, tr {
+            text-align: center;
+        }
+        th {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div>
+            <img src="https://petik.or.id/assets/img/team/Petik_YBM.png" height="70px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" height="70px">
+        </div>
+
+        <h1>Contoh-Contoh Tumbuhan</h1>
+        <i>Dibuat oleh Alamanda Ardana</i>
+        <table>
+            <tr>
+                <th>Nomor</th>
+                <th>Nama Tumbuhan</th>
+                <th>Jenis Tumbuhan</th>
+                <th>Apakah Dapat Bertumbuh?</th>
+                <th>Apa yang Bisa Dihasilkan?</th>
+                <th>Warna Hasil (Jika Ada Hasil)</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td id="nama1"></td>
+                <td id="jenis1"></td>
+                <td id="tumbuh1"></td>
+                <td id="apaHasil1"></td>
+                <td id="warnaHasil1"></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td id="nama2"></td>
+                <td id="jenis2"></td>
+                <td id="tumbuh2"></td>
+                <td id="apaHasil2"></td>
+                <td id="warnaHasil2"></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td id="nama3"></td>
+                <td id="jenis3"></td>
+                <td id="tumbuh3"></td>
+                <td id="apaHasil3"></td>
+                <td id="warnaHasil3"></td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+<script>
+    // Pembuatan Class
+    class tumbuhan {
+        
+        // Atribut - Kata Sifat
+        constructor() {
+            this.nama
+            this.jenis
+            this.warna
+        }
+        
+        // Fungsi - Kata Kerja
+        dapatTumbuh(tumbuh) {
+            tumbuh.innerText = this.nama + " dapat bertumbuh";
+        }
+        
+        berbuah(apaHasil, buah) {
+            apaHasil.innerText = this.nama + " dapat menghasilkan " + buah;
+        }
+    }
+
+    // --------------------------------------------------------------
+
+    // Inisialisasi Variabel Elemen HTML
+    let nama1 = document.getElementById("nama1");
+    let jenis1 = document.getElementById("jenis1");
+    let tumbuh1 = document.getElementById("tumbuh1");
+    let apaHasil1 = document.getElementById("apaHasil1");
+    let warnaHasil1 = document.getElementById("warnaHasil1");
+
+    let nama2 = document.getElementById("nama2");
+    let jenis2 = document.getElementById("jenis2");
+    let tumbuh2 = document.getElementById("tumbuh2");
+    let apaHasil2 = document.getElementById("apaHasil2");
+    let warnaHasil2 = document.getElementById("warnaHasil2");
+
+    let nama3 = document.getElementById("nama3");
+    let jenis3 = document.getElementById("jenis3");
+    let tumbuh3 = document.getElementById("tumbuh3");
+    let apaHasil3 = document.getElementById("apaHasil3");
+    let warnaHasil3 = document.getElementById("warnaHasil3");
+
+    // --------------------------------------------------------------
+
+    // Membuat Object sebagai Tindak Nyata Class
+    
+    // Object Mangga
+    mangga = new tumbuhan()
+    
+    mangga.nama = "Pohon Mangga"
+    nama1.innerText = mangga.nama;
+
+    mangga.jenis = "Buah-Buahan"
+    jenis1.innerText = mangga.jenis;
+
+    mangga.dapatTumbuh(tumbuh1) 
+    
+    mangga.berbuah(apaHasil1, "buah Mangga")
+    
+    mangga.warna ="Oranye"
+    warnaHasil1.innerText = mangga.warna
+
+    // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+    // Object Bayam
+    bayam = new tumbuhan()
+
+    bayam.nama = "Tanaman Bayam"
+    nama2.innerText = bayam.nama;
+    
+    bayam.jenis = "Sayur-Sayuran"
+    jenis2.innerText = bayam.jenis;
+
+    bayam.dapatTumbuh(tumbuh2)
+
+    bayam.berbuah(apaHasil2, "sayur Bayam")
+    
+    bayam.warna = "Hijau"
+    warnaHasil2.innerText = bayam.warna
+
+    // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+    // Object Alamanda
+    alamanda = new tumbuhan()
+
+    alamanda.nama = "Tanaman Alamanda"
+    nama3.innerText = alamanda.nama;
+    
+    alamanda.jenis = "Bunga-Bungaan"
+    jenis3.innerText = alamanda.jenis;
+    
+    alamanda.dapatTumbuh(tumbuh3)
+    
+    alamanda.berbuah(apaHasil3, "bunga Alamanda")
+    
+    alamanda.warna = "Kuning"
+    warnaHasil3.innerText = alamanda.warna
+</script>
+
+</html>
