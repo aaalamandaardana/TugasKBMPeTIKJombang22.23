@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alamanda Ardana - Tugas Mandiri 6 JavaScript</title>
+
+    <!-- Untuk Icon Samping Judul Website -->
+    <link rel="icon" href="https://ponpesthursina.id/public/img/linkterkait/1643086631_7cdba0c69d53c3cdb10a.png">
+
+    <!-- Supaya Font-nya jadi Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+        fieldset {
+            margin-top: 10%;
+            width: 80%;
+        }
+    </style>
+
+<body>
+    <center>
+        <fieldset>
+            <!-- Judul Program -->
+            <h1>KALKULATOR SEDERHANA</h1>
+
+            <!-- ----------------------------------- -->
+            
+            <!-- Operasi Kalkulator -->
+            <form name="kalkulator">
+                <input type="number" placeholder="Angka Pertama" id="angka1">
+
+                <select name="operasi">
+                    <option value="tambah">Ditambah (+)</option>
+                    <option value="kurang">Dikurang (-)</option>
+                    <option value="kali">Dikali (x)</option>
+                    <option value="bagi">Dibagi (:)</option>
+                </select>
+
+                <input type="number" placeholder="Angka Kedua" id="angka2">
+            </form>
+            
+            <br><br>
+
+            <!-- ----------------------------------- -->
+
+            <!-- Tombol untuk Cek Hasil -->
+            <button onclick="hitung()">Sama Dengan</button>
+
+            <br><br>
+
+            <!-- ----------------------------------- -->
+
+            <!-- Keterangan -->
+            <h3><i id="keterangan"></i></h3>
+        </fieldset>
+    </center>
+</body>
+
+<script src="index.js"> </script>
+
+</html>
