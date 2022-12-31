@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlkonverS : Program Konversi Suhu</title>
+
+    <!-- Untuk Icon Samping Judul Website -->
+    <link rel="icon" href="https://ponpesthursina.id/public/img/linkterkait/1643086631_7cdba0c69d53c3cdb10a.png">
+
+    <!-- Supaya Font-nya jadi Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+        body {
+            margin: 3rem 2rem;
+        }
+        img {
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            border: 1px solid goldenrod;
+            border-spacing: 1.8rem;
+            width: 90%;
+            margin-top: 2rem;
+        }
+        th, tr {
+            text-align: center;
+        }
+        th {
+            background-color: gold;
+        }
+        select, input {
+            width: 95%;
+        }
+
+        button {
+            margin: 2rem auto;
+        }
+        button:hover {
+            background-color: gold;
+        }
+
+
+        #hasil {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div>
+            <img src="https://petik.or.id/assets/img/team/Petik_YBM.png" height="70px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" height="70px">
+        </div>
+
+        <h1>AlkonverS</h1>
+        <i>Program Konversi Suhu</i> <br> 
+        <i>yang Dibuat oleh Alamanda Ardana</i>
+
+        <table>
+            <tr>
+                <th>Dari</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="suhuAsal" id="suhuAsal">
+                        <option value="°C">Celcius (°C)</option>
+                        <option value="°R">Reamur (°R)</option>
+                        <option value="°F">Fahrenheit (°F)</option>
+                        <option value=" K">Kelvin (K)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="number" placeholder="Masukkan Nominal" id="inputan">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Ke</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="suhuTujuan" id="suhuTujuan">
+                        <option value="°C">Celcius (°C)</option>
+                        <option value="°R">Reamur (°R)</option>
+                        <option value="°F">Fahrenheit (°F)</option>
+                        <option value=" K">Kelvin (K)</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <button onclick="hitung()" id="hitung">Hitung</button> <br>
+
+        <i id="hasil">Hasil</i>
+    </center>
+</body>
+
+<script>
+    let hitung = () => {
+        // Inisialisasi Variabel
+        let x = document.getElementById("suhuAsal").value;
+        let y = document.getElementById("suhuTujuan").value;
+        let inputan = parseFloat(document.getElementById("inputan").value);
+        let hasil = document.getElementById("hasil");
+        
+        // Asal dan Tujuannya Sama
+        if (
+            x == "°C" && y == "°C" ||
+            x == "°R" && y == "°R" ||
+            x == "°F" && y == "°F" ||
+            x == " K" && y == " K"
+        ) {
+            let total = inputan;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+
+        // Asal : °C
+        else if (x == "°C" && y == "°R") {
+            let total = 4 * inputan / 5;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == "°C" && y == "°F") {
+            let total = (9 * inputan / 5) + 32;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == "°C" && y == " K") {
+            let total = inputan + 273;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+
+        // Asal : °R
+        else if (x == "°R" && y == "°C") {
+            let total = 5 * inputan / 4;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == "°R" && y == "°F") {
+            let total = (9 * inputan / 4) + 32;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == "°R" && y == " K") {
+            let total = (5 * inputan / 4) + 273;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+
+        // Asal : °F
+        else if (x == "°F" && y == "°C") {
+            let total = (5 * inputan / 9) - 32;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == "°F" && y == "°R") {
+            let total = (4 * inputan / 9) - 32;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == "°F" && y == " K") {
+            let total = (5 * (inputan - 32) / 9) + 273;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+
+        // Asal : K
+        else if (x == " K" && y == "°C") {
+            let total = inputan - 273;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == " K" && y == "°R") {
+            let total = (4 * inputan / 5) - 273;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+        else if (x == " K" && y == "°F") {
+            let total = (9 * (inputan - 273) / 5) + 32;
+            hasil.innerText = inputan + x + " " + "=" + " " + total + y;
+        }
+    }
+</script>
+
+</html>
