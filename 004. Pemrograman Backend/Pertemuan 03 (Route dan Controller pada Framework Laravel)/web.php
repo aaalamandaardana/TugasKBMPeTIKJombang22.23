@@ -44,16 +44,3 @@ Route::get('/salam', function() {
     return "Assalaamu'alaykum Sobat, Selamat Belajar Laravel!";
 });
 Route::get('/mahasantri', [MahasantriController::class, 'index']);
-
-// --------------------------------------------
-
-// Pertemuan 4 
-Route::get('/hello', function() {
-    return view('hello', ['name' => 'Inaya']);
-});
-Route::get('/nilai', function() {
-    return view('nilai');
-});
-Route::get('/daftarnilai', function() {
-    return view('daftar_nilai');
-});
